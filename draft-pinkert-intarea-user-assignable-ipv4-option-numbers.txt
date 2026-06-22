@@ -1,0 +1,198 @@
+
+
+
+
+Internet Area Working Group                                T. J. Pinkert
+Internet-Draft                                     Siemens Mobility GmbH
+Intended status: Informational                              22 June 2026
+Expires: 24 December 2026
+
+
+                  User assignable IPv4 option numbers
+    draft-pinkert-intarea-user-assignable-ipv4-option-numbers-latest
+
+Abstract
+
+   The use of IPv4 options on the public internet is limited due to the
+   fact that many currently defined IP options have issues, as indicated
+   in [BCP186].  This serves as an argument to refuse new option
+   definitions for IPv4, even if the proposed IP options have valid use
+   cases on limited domains, or for limited end-host domains.  This I-D
+   proposes to reserve a limited range of 16 IPv4 option numbers for
+   variable assignment to types of IP options on limited domains, and
+   for limited end-host domains on the public internet.  This will
+   enable the use of IP options in two major use cases, without the need
+   to fully standardize IP options, or register numbers for them in the
+   IANA IP option numbers table.
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-
+   numbers/draft-pinkert-intarea-user-assignable-ipv4-option-
+   numbers.html.  Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-
+   assignable-ipv4-option-numbers/.
+
+   Discussion of this document takes place on the Internet Area Working
+   Group Working Group mailing list (mailto:int-area@ietf.org), which is
+   archived at https://mailarchive.ietf.org/arch/browse/int-area/.
+   Subscribe at https://www.ietf.org/mailman/listinfo/int-area/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/DutchyatWork/rfc-draft-user-assignable-ipv4-
+   option-numbers.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 24 December 2026.
+
+Copyright Notice
+
+   Copyright (c) 2026 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Conventions and Definitions
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  References
+     5.1.  Normative References
+     5.2.  Informative References
+   Acknowledgments
+   Author's Address
+
+1.  Introduction
+
+   TODO Introduction
+
+2.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+3.  Security Considerations
+
+   TODO Security
+
+4.  IANA Considerations
+
+   This document has no IANA actions.
+
+5.  References
+
+5.1.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [STD3]     Internet Standard 3,
+              <https://www.rfc-editor.org/info/std3>.
+              At the time of writing, this STD comprises the following:
+
+              Braden, R., Ed., "Requirements for Internet Hosts -
+              Communication Layers", STD 3, RFC 1122,
+              DOI 10.17487/RFC1122, October 1989,
+              <https://www.rfc-editor.org/info/rfc1122>.
+
+              Braden, R., Ed., "Requirements for Internet Hosts -
+              Application and Support", STD 3, RFC 1123,
+              DOI 10.17487/RFC1123, October 1989,
+              <https://www.rfc-editor.org/info/rfc1123>.
+
+   [STD5]     Internet Standard 5,
+              <https://www.rfc-editor.org/info/std5>.
+              At the time of writing, this STD comprises the following:
+
+              Postel, J., "Internet Protocol", STD 5, RFC 791,
+              DOI 10.17487/RFC0791, September 1981,
+              <https://www.rfc-editor.org/info/rfc791>.
+
+              Postel, J., "Internet Control Message Protocol", STD 5,
+              RFC 792, DOI 10.17487/RFC0792, September 1981,
+              <https://www.rfc-editor.org/info/rfc792>.
+
+              Mogul, J., "Broadcasting Internet Datagrams", STD 5,
+              RFC 919, DOI 10.17487/RFC0919, October 1984,
+              <https://www.rfc-editor.org/info/rfc919>.
+
+              Mogul, J., "Broadcasting Internet datagrams in the
+              presence of subnets", STD 5, RFC 922,
+              DOI 10.17487/RFC0922, October 1984,
+              <https://www.rfc-editor.org/info/rfc922>.
+
+              Mogul, J. and J. Postel, "Internet Standard Subnetting
+              Procedure", STD 5, RFC 950, DOI 10.17487/RFC0950, August
+              1985, <https://www.rfc-editor.org/info/rfc950>.
+
+              Deering, S., "Host extensions for IP multicasting", STD 5,
+              RFC 1112, DOI 10.17487/RFC1112, August 1989,
+              <https://www.rfc-editor.org/info/rfc1112>.
+
+   [STD86]    Internet Standard 86,
+              <https://www.rfc-editor.org/info/std86>.
+              At the time of writing, this STD comprises the following:
+
+              Deering, S. and R. Hinden, "Internet Protocol, Version 6
+              (IPv6) Specification", STD 86, RFC 8200,
+              DOI 10.17487/RFC8200, July 2017,
+              <https://www.rfc-editor.org/info/rfc8200>.
+
+5.2.  Informative References
+
+   [BCP186]   Best Current Practice 186,
+              <https://www.rfc-editor.org/info/bcp186>.
+              At the time of writing, this BCP comprises the following:
+
+              Gont, F., Atkinson, R., and C. Pignataro, "Recommendations
+              on Filtering of IPv4 Packets Containing IPv4 Options",
+              BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
+              <https://www.rfc-editor.org/info/rfc7126>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Author's Address
+
+   Tjeerd J. Pinkert
+   Siemens Mobility GmbH
+   Ackerstrasse 22
+   Braunschweig
+   Email: tjeerd.pinkert@siemens.com
+   URI:   https://www.mobility.siemens.com
