@@ -19,46 +19,55 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "User assignable IPv4 option numbers"
+abbrev: "UAIPV4ON"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-pinkert-intarea-user-assignable-ipv4-option-numbers-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: INT
+workgroup: int-area
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - IPv4 options
+ - private number range
 venue:
-  group: WG
+  group: Internet Area 
   type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  mail: int-area@ietf.org
+  arch: https://mailarchive.ietf.org/arch/browse/int-area
+  github: DutchyatWorl/rfc-draft-user-assignable-ipv4-option-numbers
+  latest: https://dutchyatwork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assignable-ipv4-option-numbers
 
 author:
  -
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+    fullname: Tjeerd J. Pinkert
+    organization: Siemens Mobility GmbH
+    street: Ackerstrasse 22
+    code: '38126'
+    city: Braunschweig
+    email: tjeerd.pinkert@siemens.com
+    uri: https://www.mobility.siemens.com
 
 normative:
+  STD5: #RFC791
+  STD3: #RFC1122
+  STD86: #RFC8200
 
 informative:
+  BCP186: #RFC7126
 
 ...
 
 --- abstract
 
-TODO Abstract
-
+The use of IPv4 options on the public internet is limited due to the fact that many currently defined IP options have issues, as indicated in [BCP186].
+This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have valid use cases on limited domains, or for limited end-host domains.
+This I-D proposes to reserve a limited range of 16 IPv4 option numbers for variable assignment to types of IP options on limited domains, and for limited end-host domains on the public internet.
+This will enable the use of IP options in two major use cases, without the need to fully standardize IP options, or register numbers for them in the IANA IP option numbers table.
 
 --- middle
 
