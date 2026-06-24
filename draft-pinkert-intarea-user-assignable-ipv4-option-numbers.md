@@ -102,17 +102,16 @@ These are IP option numbers X to Y of Class C, corresponding to value range K to
 The user can freely choose the value of the copy bit as needed according to the IP option type definition.
 (As an example, number 0 to 16 of Class 3 would correspond to value range 96 to 111 with an unset copy bit (0), and 224 to 239 with a set copy bit (1).)
 
-Any option type to be assigned one of the variably assignable IP option numbers SHALL be of the the Case 2 type defined in [RFC791], and have an option-type, an option-length, and (optionally) option data defined.
-This serves the purpose of interoperability with internet routers which may treat the options as unknown, but may want to read further IP options in the IP header.
-
 When used in a limited domain as defined in [RFC8799], the IP option types may define editable contents, since both routers and hosts in the domain share knowledge about how to change particular values of an IP option type.
 When used in a limited end-hosts domain, IP option types can not define editable contents, since such options are to be left alone, or are to be encapsulated when entering limited domains using IP options.
 
-IP packets with variably assignable IP options SHALL be routed over the pubic internet without modification as specified in [BCP186].
-Users of variably assignable IP options in a limited domain SHALL encapsulate IP packets with variably assignable IP options upon reception at the entry node.
-Users of variably assignable IP options in a limited domain SHALL decapsulate IP packets with variably assignable IP options upon transmisison at the exit node.
+1. Any option type to be assigned one of the variably assignable IP option numbers SHALL be of the the Case 2 type defined in [RFC791], and have an option-type, an option-length, and (optionally) option data defined.
+   This serves the purpose of interoperability with internet routers which may treat the options as unknown, but may want to read further IP options in the IP header.
+1. IP packets with variably assignable IP options SHALL be routed over the pubic internet without modification as specified in [BCP186].
+1. Users of variably assignable IP options in a limited domain SHALL encapsulate IP packets with variably assignable IP options upon reception at the entry node.
+1. Users of variably assignable IP options in a limited domain SHALL decapsulate IP packets with variably assignable IP options upon transmisison at the exit node.
+1. IP option types COULD be registered with a unique name in the IANA IP option type table (TO BE DEFINED BY IANA), whith a publicly available specification.
 
-IP option types COULD be registered with a unique name in the IANA IP option type table (TO BE DEFINED BY IANA), whith a publicly available specification.
 Note that also existing IP options, e.g. those defined in [RFC791], could be assigned to a variable IP option number, and may be listed in the table with a unique name.
 
 ## Treatment of malformed variably assigned IP options on the public internet
