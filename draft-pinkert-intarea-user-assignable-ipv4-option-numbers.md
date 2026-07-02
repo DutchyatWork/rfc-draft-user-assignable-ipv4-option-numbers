@@ -74,14 +74,14 @@ informative:
 
 The use of IPv4 options on the public internet is limited due to the fact that many currently defined IPv4 options have issues, as indicated in [BCP186].
 This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have no such issues, and have valid use cases on limited domains, or for limited end-host domains communicating over private networks or the public internet.
-This I-D defines a limited range of N IPv4 option numbers for variable assignment to types of IP options on limited domains, and for limited end-host domains on the public internet.
+This I-D defines a limited range of N IPv4 option numbers for variable assignment, by the user, to types of IP options to be used on limited domains and for limited end-host domains on the public internet.
 This will enable the use of IP options in two major use cases, without the need to fully standardize IP options, or register numbers for them in the IANA IP option numbers table.
 
 --- middle
 
 # Introduction
 
-This I-D defines a limited range of N IP option numbers for variable assignment to zero or more types of IP options.
+This I-D defines a limited range of N IP option numbers for variable assignment by the user, to zero or more types of IP options.
 Such variable assignment of IP options limits the number of world wide unique IP option numbers in the IANA tables that would otherwise have to be handed out for IP options used on limited domains, or by limited end-host domains, and opens up the room for easier experimenting with and use of new IP options without the need of full standardization of these at IETF.
 The definition is compliant with [BCP186], [STD5], and [STD3], and could also be applied for IPv6 [STD86].
 A limited number of requirements is defined for proper interoperability of end-hosts and routers.
@@ -91,7 +91,7 @@ Guidelines for the handling of non-compliant IP options by end-hosts are provide
 
 {::boilerplate bcp14-tagged}
 
-A **limited end-host domain**, is a domain of 2 or more end-hosts connected through private or public networks, that have a common understanding of certain network properties, by assignment, agreement, or convention.
+A **limited end-host domain**, is a domain of 2 or more end-hosts connected through private or public networks, that have a common understanding of certain network properties, by assignment, agreement, or convention. E.g., which IP option type is coupled to which IP option number.
 In case of a single owner of the end-hosts, properties can be assigned; in case of multiple owners of end-hosts, properties can be agreed upon; in case of general acceptance, properties can be by convention.
 The latter is not encouraged.
 
