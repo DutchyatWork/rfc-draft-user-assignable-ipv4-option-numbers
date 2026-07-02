@@ -91,7 +91,7 @@ Guidelines for the handling of non-compliant IP options by end-hosts are provide
 
 {::boilerplate bcp14-tagged}
 
-A limited end-host domain, is A domain of 2 or more end-hosts connected through private or public networks, that have a common understanding of certain user assignable network properties by assignment, agreement, or convention.
+A **limited end-host domain**, is a domain of 2 or more end-hosts connected through private or public networks, that have a common understanding of certain network properties, by assignment, agreement, or convention.
 In case of a single owner of the end-hosts, properties can be assigned; in case of multiple owners of end-hosts, properties can be agreed upon; in case of general acceptance, properties can be by convention.
 The latter is not encouraged.
 
@@ -108,32 +108,32 @@ When used in a limited end-hosts domain, IP option types can not define editable
 1. Any option type to be assigned one of the variably assignable IP option numbers SHALL be of the the Case 2 type defined in [RFC791], and have an option-type, an option-length, and (optionally) option data defined.
    This serves the purpose of interoperability with internet routers which may treat the options as unknown, but may want to read further IP options in the IP header.
 1. IP packets with variably assignable IP options SHALL be routed over the pubic internet without modification as specified in [BCP186].
-1. Users of variably assignable IP options in a limited domain SHALL encapsulate IP packets with variably assignable IP options upon reception at the entry node.
-1. Users of variably assignable IP options in a limited domain SHALL decapsulate IP packets with variably assignable IP options upon transmisison at the exit node.
+1. Users of variably assignable IP options in a limited domain SHALL encapsulate IP packets with variably assignable IP options from foreign domains upon reception at the entry node.
+1. Users of variably assignable IP options in a limited domain SHALL decapsulate previously encapsulated IP packets with variably assignable IP options upon transmisison at the exit node.
 1. IP option types COULD be registered with a unique name in the IANA IP option type table (TO BE DEFINED BY IANA), whith a publicly available specification.
 
 Note that also existing IP options, e.g. those defined in [RFC791], could be assigned to a variable IP option number, and may be listed in the table with a unique name.
 
 ## Treatment of malformed variably assigned IP options on the public internet
 
-IP packets with malformed variably assigned IP options shall be dropped as specified in this section.
+IP packets with malformed variably assigned IP options shall be handled as specified in this section.
 The definition of malformed IP options includes valid but unknown Case 1 type options.
 Systems cannot distinguish if such options are present.
 The following issues may arise for unknown variable IP options:
 
-1. The IP option length exceeds the IHL (with a Case 1 option this is the wrongly interpreted next option's number).
+1. The IP option length (with a Case 1 option this is the wrongly interpreted next option's number) exceeds the IHL.
    The IP packet SHALL be dropped.
 1. The length is in range of the IHL as stored in the IP header, but the next read IP option type (this may be data of another option) is unknown.
-   Interpretation of the IP options SHALL be stopped. The IP packet SHALL NOT be dropped, and further relayed according to [BCP186].
+   Interpretation of the IP options SHALL be stopped. The IP packet SHALL NOT be dropped, but SHALL be further relayed according to [BCP186] or SHALL be handled as specified in [STD3] by the end-host.
 1. Users of variably assignable IP options in a limited domain encounter unknown IP options on incomming packets.
-   Incoming IP packets with unknown IP options SHALL be encapsulated upon reception at the entry node and decapsulated upon transmission at the exit node.
+   Incoming IP packets with unknown IP options, and no variably assignable IP options, SHALL be transported according to [BCP186].
 
 In case of properly formed variably assigned IP options, the normal rules for IP option interpretation shall be followed as indicated in [BCP186].
 
 ## Examples
 
-The variable assignment of IP option numbers can now be performed within limited domains as follows.
-Under the assumption that some option types A to E are to be used, each machine / router in the network can be configured with the same option table.
+The variable assignment of IP option numbers can now be performed within limited (end-host) domains as follows.
+Under the assumption that some option types A to E are to be used, each machine / router in the limited (end-host) domain can be configured with the same option table.
 An example is given in Figure 1 below.
 
      +--------+-----------+
@@ -159,7 +159,7 @@ An example for the IANA table requested is given here:
     |             | ioam-ipv4-options- | doc/draft-gafni-ippm-ioam-    |
     |             | 00                 | ipv4-options/00/              |
     +-------------+--------------------+-------------------------------+
-    
+
     Figure 2: Example how the IP option type registry could look.
 
 # Security Considerations
@@ -172,11 +172,13 @@ This document requests IANA to assign a range of IP option numbers X to Y of cla
 
 This document requests IANA to initiate a table for the registration of unique IP option names to enable assignment by agreement or convention.
 The table should at least have columns for:
+
 1. Unique IP option names,
 1. Publication name(s), and
 1. (when availble) permanent links to the publication.
 
 The requirements for addition to this table SHALL be:
+
 1. A unique, non-discriminating, IP option name, changable upon descretion by IANA upon entry,
 1. A valid IP option definition for the foreseen IP protocol, and
 1. A reference to the IP option definition that can be assumed to be long-lived, e.g., a scientific publication, or an internet publication on an archive.
