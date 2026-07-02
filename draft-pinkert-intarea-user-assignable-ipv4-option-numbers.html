@@ -7,9 +7,9 @@
 <title>User assignable IPv4 option numbers</title>
 <meta content="Tjeerd J. Pinkert" name="author">
 <meta content="
-       The use of IPv4 options on the public internet is limited due to the fact that many currently defined IP options have issues, as indicated in  .
-This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have valid use cases on limited domains, or for limited end-host domains.
-This I-D proposes to reserve a limited range of 16 IPv4 option numbers for variable assignment to types of IP options on limited domains, and for limited end-host domains on the public internet.
+       The use of IPv4 options on the public internet is limited due to the fact that many currently defined IPv4 options have issues, as indicated in  .
+This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have no such issues, and have valid use cases on limited domains, or for limited end-host domains communicating over private networks or the public internet.
+This I-D defines a limited range of N IPv4 option numbers for variable assignment, by the user, to types of IP options to be used on limited domains and for limited end-host domains on the public internet.
 This will enable the use of IP options in two major use cases, without the need to fully standardize IP options, or register numbers for them in the IANA IP option numbers table. 
     " name="description">
 <meta content="xml2rfc 3.34.0" name="generator">
@@ -1048,11 +1048,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">UAIPV4ON</td>
-<td class="right">June 2026</td>
+<td class="right">July 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Pinkert</td>
-<td class="center">Expires 24 December 2026</td>
+<td class="center">Expires 3 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg {
 <dd class="internet-draft">draft-pinkert-intarea-user-assignable-ipv4-option-numbers-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-22" class="published">22 June 2026</time>
+<time datetime="2026-07-02" class="published">2 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
-<dd class="intended-status">Informational</dd>
+<dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-24">24 December 2026</time></dd>
+<dd class="expires"><time datetime="2027-01-03">3 January 2027</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1083,9 +1083,9 @@ svg {
 <h1 id="title">User assignable IPv4 option numbers</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The use of IPv4 options on the public internet is limited due to the fact that many currently defined IP options have issues, as indicated in <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.
-This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have valid use cases on limited domains, or for limited end-host domains.
-This I-D proposes to reserve a limited range of 16 IPv4 option numbers for variable assignment to types of IP options on limited domains, and for limited end-host domains on the public internet.
+<p id="section-abstract-1">The use of IPv4 options on the public internet is limited due to the fact that many currently defined IPv4 options have issues, as indicated in <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.
+This serves as an argument to refuse new option definitions for IPv4, even if the proposed IP options have no such issues, and have valid use cases on limited domains, or for limited end-host domains communicating over private networks or the public internet.
+This I-D defines a limited range of N IPv4 option numbers for variable assignment, by the user, to types of IP options to be used on limited domains and for limited end-host domains on the public internet.
 This will enable the use of IP options in two major use cases, without the need to fully standardize IP options, or register numbers for them in the IANA IP option numbers table.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
@@ -1123,7 +1123,7 @@ This will enable the use of IP options in two major use cases, without the need 
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 24 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1159,27 +1159,38 @@ This will enable the use of IP options in two major use cases, without the need 
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-references" class="internal xref">References</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-variably-assignable-ip-opti" class="internal xref">Variably assignable IP option numbers</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-treatment-of-malformed-vari" class="internal xref">Treatment of malformed variably assigned IP options on the public internet</a></p>
 </li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-examples" class="internal xref">Examples</a></p>
 </li>
             </ul>
 </li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+</li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1190,7 +1201,11 @@ This will enable the use of IP options in two major use cases, without the need 
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">TODO Introduction<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">This I-D defines a limited range of N IP option numbers for variable assignment by the user, to zero or more types of IP options.
+Such variable assignment of IP options limits the number of world wide unique IP option numbers in the IANA tables that would otherwise have to be handed out for IP options used on limited domains, or by limited end-host domains, and opens up the room for easier experimenting with and use of new IP options without the need of full standardization of these at IETF.
+The definition is compliant with <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>, <span>[<a href="#STD5" class="cite xref">STD5</a>]</span>, and <span>[<a href="#STD3" class="cite xref">STD3</a>]</span>, and could also be applied for IPv6 <span>[<a href="#STD86" class="cite xref">STD86</a>]</span>.
+A limited number of requirements is defined for proper interoperability of end-hosts and routers.
+Guidelines for the handling of non-compliant IP options by end-hosts are provided.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1202,35 +1217,173 @@ This will enable the use of IP options in two major use cases, without the need 
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-2">A <strong>limited end-host domain</strong>, is a domain of 2 or more end-hosts connected through private or public networks, that have a common understanding of certain network properties, by assignment, agreement, or convention. E.g., which IP option type is coupled to which IP option number.
+In case of a single owner of the end-hosts, properties can be assigned; in case of multiple owners of end-hosts, properties can be agreed upon; in case of general acceptance, properties can be by convention.
+The latter is not encouraged.<a href="#section-2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="variably-assignable-ip-option-numbers">
+<section id="section-3">
+      <h2 id="name-variably-assignable-ip-opti">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-variably-assignable-ip-opti" class="section-name selfRef">Variably assignable IP option numbers</a>
+      </h2>
+<p id="section-3-1">There are N IP option numbers of Class C reserved in <span>[<a href="#IANA-IP-Option-Numbers" class="cite xref">IANA-IP-Option-Numbers</a>]</span> for variable IP option type assignment.
+These are IP option numbers X to Y of Class C, corresponding to value range K to L with an unser copy bit (0) and O to P with a set copy bit (1)..
+The user can freely choose the value of the copy bit as needed according to the IP option type definition.
+(As an example, number 0 to 16 of Class 3 would correspond to value range 96 to 111 with an unset copy bit (0), and 224 to 239 with a set copy bit (1).)<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">When used in a limited domain as defined in <span>[<a href="#RFC8799" class="cite xref">RFC8799</a>]</span>, the IP option types may define editable contents, since both routers and hosts in the domain share knowledge about how to change particular values of an IP option type.
+When used in a limited end-hosts domain, IP option types can not define editable contents, since such options are to be left alone, or are to be encapsulated when entering limited domains using IP options.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-3-3">
+<li id="section-3-3.1">
+          <p id="section-3-3.1.1">Any option type to be assigned one of the variably assignable IP option numbers <span class="bcp14">SHALL</span> be of the the Case 2 type defined in <span>[<a href="#RFC791" class="cite xref">RFC791</a>]</span>, and have an option-type, an option-length, and (optionally) option data defined.
+This serves the purpose of interoperability with internet routers which may treat the options as unknown, but may want to read further IP options in the IP header.<a href="#section-3-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-3-3.2">
+          <p id="section-3-3.2.1">IP packets with variably assignable IP options <span class="bcp14">SHALL</span> be routed over the pubic internet without modification as specified in <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.<a href="#section-3-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-3-3.3">
+          <p id="section-3-3.3.1">Users of variably assignable IP options in a limited domain <span class="bcp14">SHALL</span> encapsulate IP packets with variably assignable IP options from foreign domains upon reception at the entry node.<a href="#section-3-3.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-3-3.4">
+          <p id="section-3-3.4.1">Users of variably assignable IP options in a limited domain <span class="bcp14">SHALL</span> decapsulate previously encapsulated IP packets with variably assignable IP options upon transmisison at the exit node.<a href="#section-3-3.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-3-3.5">
+          <p id="section-3-3.5.1">IP option types COULD be registered with a unique name in the IANA IP option type table (TO BE DEFINED BY IANA), whith a publicly available specification.<a href="#section-3-3.5.1" class="pilcrow">¶</a></p>
+</li>
+      </ol>
+<p id="section-3-4">Note that also existing IP options, e.g. those defined in <span>[<a href="#RFC791" class="cite xref">RFC791</a>]</span>, could be assigned to a variable IP option number, and may be listed in the table with a unique name.<a href="#section-3-4" class="pilcrow">¶</a></p>
+<div id="treatment-of-malformed-variably-assigned-ip-options-on-the-public-internet">
+<section id="section-3.1">
+        <h3 id="name-treatment-of-malformed-vari">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-treatment-of-malformed-vari" class="section-name selfRef">Treatment of malformed variably assigned IP options on the public internet</a>
+        </h3>
+<p id="section-3.1-1">IP packets with malformed variably assigned IP options shall be handled as specified in this section.
+The definition of malformed IP options includes valid but unknown Case 1 type options.
+Systems cannot distinguish if such options are present.
+The following issues may arise for unknown variable IP options:<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-3.1-2">
+<li id="section-3.1-2.1">
+            <p id="section-3.1-2.1.1">The IP option length (with a Case 1 option this is the wrongly interpreted next option's number) exceeds the IHL.
+The IP packet <span class="bcp14">SHALL</span> be dropped.<a href="#section-3.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-3.1-2.2">
+            <p id="section-3.1-2.2.1">The length is in range of the IHL as stored in the IP header, but the next read IP option type (this may be data of another option) is unknown.
+Interpretation of the IP options <span class="bcp14">SHALL</span> be stopped. The IP packet <span class="bcp14">SHALL NOT</span> be dropped, but <span class="bcp14">SHALL</span> be further relayed according to <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span> or <span class="bcp14">SHALL</span> be handled as specified in <span>[<a href="#STD3" class="cite xref">STD3</a>]</span> by the end-host.<a href="#section-3.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li id="section-3.1-2.3">
+            <p id="section-3.1-2.3.1">Users of variably assignable IP options in a limited domain encounter unknown IP options on incomming packets.
+Incoming IP packets with unknown IP options, and no variably assignable IP options, <span class="bcp14">SHALL</span> be transported according to <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.<a href="#section-3.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ol>
+<p id="section-3.1-3">In case of properly formed variably assigned IP options, the normal rules for IP option interpretation shall be followed as indicated in <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="examples">
+<section id="section-3.2">
+        <h3 id="name-examples">
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
+        </h3>
+<p id="section-3.2-1">The variable assignment of IP option numbers can now be performed within limited (end-host) domains as follows.
+Under the assumption that some option types A to E are to be used, each machine / router in the limited (end-host) domain can be configured with the same option table.
+An example is given in Figure 1 below.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.2-2">
+<pre>
+ +--------+-----------+
+ | Option | Option    |
+ | number | type name |
+ +--------+-----------+
+ |     96 |         A |
+ |    100 |         D |
+ |    101 |         E |
+ |    228 |         B |
+ |    239 |         C |
+ +--------+-----------+
+
+ Figure 1: Option assignment table
+</pre><a href="#section-3.2-2" class="pilcrow">¶</a>
+</div>
+<p id="section-3.2-3">An example for the IANA table requested is given here:<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.2-4">
+<pre>
++-------------+--------------------+-------------------------------+
+| Option type | Option type        | Internet reference            |
+|   name      |   specification    |                               |
++-------------+--------------------+-------------------------------+
+| IOAM-IPv4   | draft-gafni-ippm-  | https://datatracker.ietf.org/ |
+|             | ioam-ipv4-options- | doc/draft-gafni-ippm-ioam-    |
+|             | 00                 | ipv4-options/00/              |
++-------------+--------------------+-------------------------------+
+
+Figure 2: Example how the IP option type registry could look.
+</pre><a href="#section-3.2-4" class="pilcrow">¶</a>
+</div>
+</section>
+</div>
 </section>
 </div>
 <div id="security-considerations">
-<section id="section-3">
+<section id="section-4">
       <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">Security assessment for IP option types to be defined, may be followed after <span>[<a href="#BCP186" class="cite xref">BCP186</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-4">
+<section id="section-5">
       <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">This document requests IANA to assign a range of IP option numbers X to Y of class C for variable assignment.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">This document requests IANA to initiate a table for the registration of unique IP option names to enable assignment by agreement or convention.
+The table should at least have columns for:<a href="#section-5-2" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-5-3">
+<li id="section-5-3.1">
+          <p id="section-5-3.1.1">Unique IP option names,<a href="#section-5-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-5-3.2">
+          <p id="section-5-3.2.1">Publication name(s), and<a href="#section-5-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-5-3.3">
+          <p id="section-5-3.3.1">(when availble) permanent links to the publication.<a href="#section-5-3.3.1" class="pilcrow">¶</a></p>
+</li>
+      </ol>
+<p id="section-5-4">The requirements for addition to this table <span class="bcp14">SHALL</span> be:<a href="#section-5-4" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-5-5">
+<li id="section-5-5.1">
+          <p id="section-5-5.1.1">A unique, non-discriminating, IP option name, changable upon descretion by IANA upon entry,<a href="#section-5-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-5-5.2">
+          <p id="section-5-5.2.1">A valid IP option definition for the foreseen IP protocol, and<a href="#section-5-5.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-5-5.3">
+          <p id="section-5-5.3.1">A reference to the IP option definition that can be assumed to be long-lived, e.g., a scientific publication, or an internet publication on an archive.<a href="#section-5-5.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-5-5.4">
+          <p id="section-5-5.4.1">The referenced publication is stored for long term archiving, is publicly available and is available free of charge.<a href="#section-5-5.4.1" class="pilcrow">¶</a></p>
+</li>
+      </ol>
 </section>
 </div>
 <div id="sec-combined-references">
-<section id="section-5">
+<section id="section-6">
       <h2 id="name-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
 <div id="sec-normative-references">
-<section id="section-5.1">
+<section id="section-6.1">
         <h3 id="name-normative-references">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
+<dt id="IANA-IP-Option-Numbers">[IANA-IP-Option-Numbers]</dt>
+        <dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"IP Option Numbers"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/ip-parameters/ip-parameters.xhtml#ip-parameters-1">https://www.iana.org/assignments/ip-parameters/ip-parameters.xhtml#ip-parameters-1</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC791">[RFC791]</dt>
+        <dd>
+<span class="refAuthor">Postel, J.</span>, <span class="refTitle">"Internet Protocol"</span>, <span class="seriesInfo">STD 5</span>, <span class="seriesInfo">RFC 791</span>, <span class="seriesInfo">DOI 10.17487/RFC0791</span>, <time datetime="1981-09" class="refDate">September 1981</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc791">https://www.rfc-editor.org/rfc/rfc791</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
@@ -1279,18 +1432,22 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </section>
 </div>
 <div id="sec-informative-references">
-<section id="section-5.2">
+<section id="section-6.2">
         <h3 id="name-informative-references">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
 <dt id="BCP186">[BCP186]</dt>
-      <dd>
+        <dd>
 <div class="refInstance">Best Current Practice 186, <span>&lt;<a href="https://www.rfc-editor.org/info/bcp186">https://www.rfc-editor.org/info/bcp186</a>&gt;</span>.<br><span>At the time of writing, this BCP comprises the following:</span>
 </div>
 <div class="refInstance" id="RFC7126">
             <span class="refAuthor">Gont, F.</span>, <span class="refAuthor">Atkinson, R.</span>, and <span class="refAuthor">C. Pignataro</span>, <span class="refTitle">"Recommendations on Filtering of IPv4 Packets Containing IPv4 Options"</span>, <span class="seriesInfo">BCP 186</span>, <span class="seriesInfo">RFC 7126</span>, <span class="seriesInfo">DOI 10.17487/RFC7126</span>, <time datetime="2014-02" class="refDate">February 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc7126">https://www.rfc-editor.org/info/rfc7126</a>&gt;</span>. </div>
 </dd>
+<dd class="break"></dd>
+<dt id="RFC8799">[RFC8799]</dt>
+      <dd>
+<span class="refAuthor">Carpenter, B.</span> and <span class="refAuthor">B. Liu</span>, <span class="refTitle">"Limited Domains and Internet Protocols"</span>, <span class="seriesInfo">RFC 8799</span>, <span class="seriesInfo">DOI 10.17487/RFC8799</span>, <time datetime="2020-07" class="refDate">July 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8799">https://www.rfc-editor.org/rfc/rfc8799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -1302,7 +1459,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1">The Author wants to thank Siemens Mobility GmbH for enabling this work.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
