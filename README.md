@@ -1,8 +1,8 @@
 <!-- regenerate: on (set to off if you edit this file) -->
 
-# TODO - Your title
+# User assignable IPv4 option numbers
 
-This is the working area for the individual Internet-Draft, "TODO - Your title".
+This is the working area for the individual Internet-Draft, "User assignable IPv4 option numbers".
 
 * [Editor's Copy](https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assignable-ipv4-option-numbers.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-assignable-ipv4-option-numbers)
@@ -13,7 +13,7 @@ This is the working area for the individual Internet-Draft, "TODO - Your title".
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/DutchyatWork/rfc-draft-user-assignable-ipv4-option-numbers/blob//CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/DutchyatWork/rfc-draft-user-assignable-ipv4-option-numbers/blob/main/CONTRIBUTING.md).
 
 The contributing file also has tips on how to make contributions, if you
 don't already know how to do that.
