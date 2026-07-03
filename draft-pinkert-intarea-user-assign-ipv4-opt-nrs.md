@@ -29,18 +29,18 @@ number:
 date:
 consensus: true
 v: 3
-area: "Internet"
-workgroup: "Internet Area Working Group"
+area: ""
+workgroup: ""
 keyword:
  - IPv4 options
  - private number range
 venue:
-  group: "Internet Area Working Group"
-  type: "Working Group"
-  mail: "int-area@ietf.org"
-  arch: "https://mailarchive.ietf.org/arch/browse/int-area/"
+  group: ""
+  type: ""
+  mail: ""
+  arch: ""
   github: "DutchyatWork/rfc-draft-user-assignable-ipv4-option-numbers"
-  latest: "https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/draft-pinkert-intarea-user-assignable-ipv4-option-numbers.html"
+  latest: "https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/draft-pinkert-intarea-user-assign-ipv4-opt-nrs.html"
 
 author:
  -
