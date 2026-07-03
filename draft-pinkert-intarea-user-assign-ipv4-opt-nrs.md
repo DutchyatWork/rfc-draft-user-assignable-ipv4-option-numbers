@@ -23,7 +23,7 @@ title: "User assignable IPv4 option numbers"
 abbrev: "UAIPV4ON"
 category: std
 
-docname: draft-pinkert-intarea-user-assignable-ipv4-option-numbers-latest
+docname: draft-pinkert-intarea-user-assign-ipv4-opt-nrs-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
