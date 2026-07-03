@@ -4,12 +4,12 @@
 
 Internet Area Working Group                                T. J. Pinkert
 Internet-Draft                                     Siemens Mobility GmbH
-Intended status: Standards Track                             2 July 2026
-Expires: 3 January 2027
+Intended status: Standards Track                             3 July 2026
+Expires: 4 January 2027
 
 
                   User assignable IPv4 option numbers
-    draft-pinkert-intarea-user-assignable-ipv4-option-numbers-latest
+         draft-pinkert-intarea-user-assign-ipv4-opt-nrs-latest
 
 Abstract
 
@@ -34,8 +34,8 @@ About This Document
    https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-
    numbers/draft-pinkert-intarea-user-assignable-ipv4-option-
    numbers.html.  Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-
-   assignable-ipv4-option-numbers/.
+   https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-assign-
+   ipv4-opt-nrs/.
 
    Discussion of this document takes place on the Internet Area Working
    Group Working Group mailing list (mailto:int-area@ietf.org), which is
@@ -61,7 +61,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2027.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
