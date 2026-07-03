@@ -111,6 +111,7 @@ When used in a limited end-hosts domain, IP option types can not define editable
 1. Users of variably assignable IP options in a limited domain SHALL encapsulate IP packets with variably assignable IP options from foreign domains upon reception at the entry node.
 1. Users of variably assignable IP options in a limited domain SHALL decapsulate previously encapsulated IP packets with variably assignable IP options upon transmisison at the exit node.
 1. IP option types COULD be registered with a unique name in the IANA IP option type table (TO BE DEFINED BY IANA), whith a publicly available specification.
+1. A security analysis SHALL be made available for IP option types to be registered by IANA.
 
 Note that also existing IP options, e.g. those defined in [RFC791], could be assigned to a variable IP option number, and may be listed in the table with a unique name.
 
