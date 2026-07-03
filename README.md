@@ -4,10 +4,10 @@
 
 This is the working area for the individual Internet-Draft, "User assignable IPv4 option numbers".
 
-* [Editor's Copy](https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assignable-ipv4-option-numbers.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-assignable-ipv4-option-numbers)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-pinkert-intarea-user-assignable-ipv4-option-numbers)
-* [Compare Editor's Copy to Individual Draft](https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assignable-ipv4-option-numbers.diff)
+* [Editor's Copy](https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assign-ipv4-opt-nrs.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-pinkert-intarea-user-assign-ipv4-opt-nrs)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-pinkert-intarea-user-assign-ipv4-opt-nrs)
+* [Compare Editor's Copy to Individual Draft](https://DutchyatWork.github.io/rfc-draft-user-assignable-ipv4-option-numbers/#go.draft-pinkert-intarea-user-assign-ipv4-opt-nrs.diff)
 
 
 ## Contributing
